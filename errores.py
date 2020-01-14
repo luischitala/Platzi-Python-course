@@ -9,4 +9,9 @@ countries = {
 
 while True:
     country = str(input('Escribe el nombre un pais: ')).lower()
-    print('La poblacion de {} es: {} millones'.format(country, countries[country]))
+    
+    try:
+        print('La poblacion de {} es: {} millones'.format(country, countries[country]))
+    except KeyError:
+        print('No tenemos el dato de la población de {}'.format(country))
+        
